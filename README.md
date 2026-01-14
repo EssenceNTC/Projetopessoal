@@ -1,2 +1,0 @@
-# Projetopessoal
-portifólio Rodrigo 
