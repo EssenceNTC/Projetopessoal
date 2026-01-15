@@ -5,7 +5,7 @@ function ativaletra(elemento){
     arrtexto.forEach(( letra, i)=>{
         setTimeout(()=>{
             elemento.innerHTML += letra;
-        }, ('75 * i'); 
+        }, ('75 * i')); 
     });
 }
 
