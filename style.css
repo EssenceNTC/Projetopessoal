@@ -76,11 +76,20 @@ header h1 span {
     width: 100%;
 }
 
+/* Link ativo */
+.nav-link.active {
+    color: #3498db;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
 /* Seção principal */
 .section-div {
     padding: 120px 5% 60px;
     min-height: 100vh;
-    display: flex;
+    display: none; /* Todas as seções começam ocultas */
     align-items: center;
     background-color: #ecf0f1;
 }
@@ -93,6 +102,12 @@ header h1 span {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Seção ativa */
+.section-div.active {
+    display: flex !important;
+    animation: fadeInUp 0.5s ease-out;
 }
 
 /* Conteúdo de texto */
@@ -133,7 +148,7 @@ header h1 span {
 }
 
 /* Botão */
-.section-div a {
+.download-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -147,7 +162,7 @@ header h1 span {
     border: 2px solid #3498db;
 }
 
-.section-div a:hover {
+.download-btn:hover {
     background-color: transparent;
     color: #3498db;
     transform: translateY(-3px);
@@ -159,6 +174,10 @@ header h1 span {
 }
 
 /* Imagem */
+.image-container {
+    flex-shrink: 0;
+}
+
 .section-div img {
     width: 350px;
     height: 350px;
@@ -174,11 +193,186 @@ header h1 span {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Seções adicionais (inicialmente ocultas) */
-#about, #resume, #portfolio, #pricing, #contact {
-    background-color: #f9f9f9;
-    display: none;
+/* Estilos para a seção de experiências */
+.section-intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.experience-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.company-logo-placeholder {
+    font-size: 2.5rem;
+    min-width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.experience-title h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.experience-title h4 {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.experience-period {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.experience-location {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.responsibilities {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.responsibilities li {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.skill-tag {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Estilos para a seção de contato */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+.contact-info i {
+    color: #3498db;
+    font-size: 1.2rem;
+    min-width: 30px;
+}
+
+/* Estilos para a seção de portfólio */
+#portfolio .text-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #2c3e50;
+}
+
+#portfolio .text-content a:hover {
+    background-color: transparent;
+    color: #2c3e50;
+    transform: translateY(-3px);
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-content > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.text-content h2:nth-child(1) { animation-delay: 0.2s; }
+.text-content h2:nth-child(2) { animation-delay: 0.4s; }
+.text-content p { animation-delay: 0.6s; }
+.text-content a { animation-delay: 0.8s; }
 
 /* Responsividade */
 @media (max-width: 992px) {
@@ -231,6 +425,24 @@ header h1 span {
     .section-div p {
         font-size: 1rem;
     }
+    
+    .experience-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .company-logo-placeholder {
+        align-self: flex-start;
+    }
+    
+    .skills-tags {
+        gap: 8px;
+    }
+    
+    .skill-tag {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -261,32 +473,59 @@ header h1 span {
         padding: 10px 25px;
         font-size: 0.9rem;
     }
-}
-
-/* Animações de entrada */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    
+    .experience-card {
+        padding: 20px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .experience-title h3 {
+        font-size: 1.3rem;
+    }
+    
+    .skills-tags {
+        justify-content: center;
+    }
+    
+    .contact-info p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 }
 
-.text-content > * {
-    animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
+/* Menu toggle para mobile (adicione se quiser) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
 }
 
-.text-content h2:nth-child(1) { animation-delay: 0.2s; }
-.text-content h2:nth-child(2) { animation-delay: 0.4s; }
-.text-content p { animation-delay: 0.6s; }
-.text-content a { animation-delay: 0.8s; }
-
-/* Estilos para seções ativas */
-.section-div.active {
-    display: flex !important;
-    animation: fadeInUp 0.5s ease-out;
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navegacao-primaria {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navegacao-primaria.active {
+        display: flex;
+    }
+    
+    .navegacao-primaria li {
+        margin: 10px 0;
+    }
 }
