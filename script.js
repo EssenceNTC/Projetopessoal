@@ -1,157 +1,200 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos DOM
-    const typingElement = document.querySelector('.digitando');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.navegacao-primaria');
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section-div');
-    const nav = document.querySelector('.navegacao-primaria');
-    let cursorInterval; // Variável para controle do cursor
-    
-    // 1. Efeito de digitação
-    if(typingElement) {
-        const text = "Desenvolvedor Web em Treinamento";
-        typingElement.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                typingElement.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            } else {
-                // Manter o cursor piscando
-                cursorInterval = setInterval(() => {
-                    typingElement.style.borderRightColor = 
-                        typingElement.style.borderRightColor === 'transparent' ? '#3498db' : 'transparent';
-                }, 750);
-            }
-        };
-        
-        // Iniciar efeito após 1 segundo
-        setTimeout(typeWriter, 1000);
-    }
-    
-    // 2. Navegação entre seções
+    const typingElement = document.querySelector('.digitando');
+    const contactForm = document.getElementById('messageForm');
+
+    // Menu mobile toggle
+    menuToggle?.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        const icon = this.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Fechar menu ao clicar em um link (mobile)
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remover classe ativa de todos os links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Adicionar classe ativa ao link clicado
-            this.classList.add('active');
-            
-            // Esconder todas as seções
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Mostrar a seção correspondente
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if(targetSection) {
-                targetSection.classList.add('active');
-                
-                // Fechar menu mobile se aberto
-                if(window.innerWidth <= 768) {
-                    nav.classList.remove('active');
-                    const toggleBtn = document.querySelector('.menu-toggle');
-                    if(toggleBtn) {
-                        toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                        toggleBtn.setAttribute('aria-expanded', 'false');
-                    }
-                }
-                
-                // Rolagem suave para a seção
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
             }
         });
     });
-    
-    // 3. Menu responsivo para mobile
-    if(window.innerWidth <= 768 && nav) {
-        // Verificar se já existe um botão de menu
-        if(!document.querySelector('.menu-toggle')) {
-            // Criar botão de menu para mobile
-            const toggleBtn = document.createElement('button');
-            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            toggleBtn.className = 'menu-toggle';
-            toggleBtn.setAttribute('aria-label', 'Abrir menu de navegação');
-            toggleBtn.setAttribute('aria-expanded', 'false');
+
+    // Navegação por seções com highlight ativo
+    function setActiveSection() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
             
-            // Inserir após o h1 no header
-            const header = document.querySelector('header');
-            header.appendChild(toggleBtn);
-            
-            // Inicialmente esconder navegação no mobile
-            nav.classList.remove('active');
-            
-            toggleBtn.addEventListener('click', () => {
-                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-                
-                // Alternar estado do menu
-                nav.classList.toggle('active');
-                
-                // Atualizar ícone e atributo ARIA
-                toggleBtn.setAttribute('aria-expanded', !isExpanded);
-                toggleBtn.innerHTML = isExpanded ? 
-                    '<i class="fas fa-bars"></i>' : 
-                    '<i class="fas fa-times"></i>';
-            });
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Mostrar apenas a seção ativa
+    function showActiveSection() {
+        const hash = window.location.hash || '#home';
+        
+        sections.forEach(section => {
+            section.classList.remove('active');
+            if (section.getAttribute('id') === hash.slice(1)) {
+                section.classList.add('active');
+            }
+        });
+    }
+
+    // Efeito de digitação
+    function typeWriter(element, text, i = 0) {
+        if (i < text.length) {
+            element.textContent = text.substring(0, i + 1);
+            setTimeout(() => typeWriter(element, text, i + 1), 100);
+        } else {
+            // Repetir o efeito após pausa
+            setTimeout(() => {
+                element.textContent = '';
+                typeWriter(element, text);
+            }, 3000);
         }
     }
-    
-    // 4. Ajustar menu em redimensionamento da janela
-    window.addEventListener('resize', () => {
-        // Usar debounce para melhor performance
-        clearTimeout(this.resizeTimeout);
-        this.resizeTimeout = setTimeout(() => {
-            const toggleBtn = document.querySelector('.menu-toggle');
-            
-            if(window.innerWidth > 768) {
-                // Em telas grandes: mostrar menu e remover botão toggle
-                if(nav) {
-                    nav.classList.remove('active');
-                    nav.style.display = 'flex';
-                }
-                if(toggleBtn) {
-                    toggleBtn.remove();
-                }
-            } else {
-                // Em telas pequenas: criar botão toggle se não existir
-                if(nav && !toggleBtn) {
-                    const newToggleBtn = document.createElement('button');
-                    newToggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    newToggleBtn.className = 'menu-toggle';
-                    newToggleBtn.setAttribute('aria-label', 'Abrir menu de navegação');
-                    newToggleBtn.setAttribute('aria-expanded', 'false');
-                    
-                    document.querySelector('header').appendChild(newToggleBtn);
-                    
-                    // Esconder navegação inicialmente
-                    nav.classList.remove('active');
-                    
-                    newToggleBtn.addEventListener('click', () => {
-                        const isExpanded = newToggleBtn.getAttribute('aria-expanded') === 'true';
-                        nav.classList.toggle('active');
-                        newToggleBtn.setAttribute('aria-expanded', !isExpanded);
-                        newToggleBtn.innerHTML = isExpanded ? 
-                            '<i class="fas fa-bars"></i>' : 
-                            '<i class="fas fa-times"></i>';
-                    });
-                }
-            }
-        }, 250);
-    });
-    
-    // 5. Limpar intervalo do cursor quando sair da página
-    window.addEventListener('beforeunload', () => {
-        if(cursorInterval) {
-            clearInterval(cursorInterval);
+
+    // Inicializar efeito de digitação
+    if (typingElement) {
+        const texts = [
+            'Desenvolvedor trainee',
+        ];
+        let textIndex = 0;
+        
+        function changeText() {
+            typeWriter(typingElement, texts[textIndex]);
+            textIndex = (textIndex + 1) % texts.length;
         }
+        
+        // Iniciar primeiro texto
+        setTimeout(() => changeText(), 1000);
+        
+        // Mudar texto periodicamente
+        setInterval(changeText, 8000);
+    }
+
+    // Formulário de contato (simulação)
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coletar dados do formulário
+            const formData = new FormData(this);
+            const formValues = Object.fromEntries(formData);
+            
+            // Simular envio
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Mensagem enviada com sucesso! Em breve entrarei em contato.');
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+
+    // Scroll suave para âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Atualizar URL
+                history.pushState(null, null, targetId);
+                showActiveSection();
+            }
+        });
+    });
+
+    // Atualizar seção ativa durante o scroll
+    window.addEventListener('scroll', function() {
+        setActiveSection();
+        
+        // Header com efeito de blur no scroll
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+            header.style.backdropFilter = 'blur(15px)';
+        } else {
+            header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+            header.style.backdropFilter = 'blur(10px)';
+        }
+    });
+
+    // Efeito parallax suave
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.image-container, .section-header');
+        
+        parallaxElements.forEach(element => {
+            const speed = element.classList.contains('image-container') ? 0.5 : 0.3;
+            const yPos = -(scrolled * speed);
+            element.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+
+    // Animar elementos quando entram na viewport
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observar elementos para animação
+    document.querySelectorAll('.experience-card, .about-card, .portfolio-card, .contact-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+
+    // Inicializar
+    showActiveSection();
+    setActiveSection();
+
+    // Preloader (opcional)
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
     });
 });

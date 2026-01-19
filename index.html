@@ -3,178 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Saber - Rodrigo</title>
+    <title>Rodrigo Sousa | Desenvolvedor em desenvolvimento </title>
     <!-- Link para o CSS externo -->
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
     <header>
-        <h1>Dev <span>Saber</span></h1>
-        <nav>
-            <ul class="navegacao-primaria">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">Sobre</a></li>
-                <li><a href="#resume" class="nav-link">Resumo</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                <li><a href="#pricing" class="nav-link">Preços</a></li>
-                <li><a href="#contact" class="nav-link">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Rodrigo <span>Sousa</span></h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="navegacao-primaria">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#resume" class="nav-link">Experiência</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
-    <section id="home" aria-label="Seção de apresentação de Rodrigo" class="section-div active">
-        <div>
+    <!-- Seção Home -->
+    <section id="home" aria-label="Apresentação inicial" class="section-div active">
+        <div class="container">
             <div class="text-content">
-                <h2>Olá! Eu sou</h2>
-                <h2 class="digitando">Desenvolvedor Web em Treinamento</h2>
-                <p>
-                    Meu nome é Rodrigo, sou um desenvolvedor web em treinamento, apaixonado por criar soluções digitais inovadoras. Estou constantemente aprimorando minhas habilidades e explorando novas tecnologias para oferecer o melhor em desenvolvimento web. Vamos construir algo incrível juntos!
+                <h2>Olá, eu sou</h2>
+                <h2 class="digitando">Desenvolvedor trainee </h2>
+                <p class="subtitle">
+                    Transformando conceitos em soluções digitais através de estudo contínuo e excelência técnica.
+
+                    Convertendo ideias em realidade digital por meio de aprendizado constante e dedicação à qualidade.
+
+                    Com estudo e dedicação, materializo visões em projetos funcionais que fazem a diferença.
+
+                    Aprendizado constante para transformar ideias inovadoras em soluções tecnológicas impactantes.
                 </p>
-                <a href="curriculo-rodrigo.pdf.pdf" download class="download-btn">
-                    <i class="fas fa-download"></i> Download CV
-                </a>
+                <div class="cta-buttons">
+                    <a href="curriculo-rodrigo.pdf.pdf" download class="download-btn">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                   
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/EssenceNTC" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:rodrigodesousa17@outlook.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rodrigodesousacloud/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
-            <div class="image-container"> 
-                <img src="unnamed (1).jpg" alt="Foto de Rodrigo, desenvolvedor web em treinamento">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="unnamed (1).jpg" alt="Rodrigo Sousa - Desenvolvedor em desenvolvimento loading="lazy">
+                    <div class="image-badge">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <!-- Seções adicionais -->
+    <!-- Seção Sobre -->
     <section id="about" class="section-div">
-        <div>
+        <div class="container">
             <div class="text-content">
-                <h2>Sobre Mim</h2>
-                <p>Meu nome é Rodrigo, tenho 26 anos e desde muito novo venho tentando trilhar nessa caminhada tão 
-                difícil da tecnologia. Digo difícil porque a tecnologia é algo incrível e está em constante atualização.
-                Dentro desse tempo, já aprendi muito com experiências de vida e também com estudos e trajetórias trilhadas 
-                até aqui.</p>
+                <div class="section-header">
+                    <h2>Sobre Mim</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <p class="about-intro">Com 26 anos, minha jornada na tecnologia é marcada por aprendizado constante e adaptação às inovações do setor.</p>
+                
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formação</h3>
+                        <p>Análise e Desenvolvimento de Sistemas - Cursando</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Objetivo</h3>
+                        <p>Desenvolver soluções tecnológicas que impactem positivamente a vida das pessoas</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Filosofia</h3>
+                        <p>"Escrever código limpo não é uma opção, é uma responsabilidade"</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="resume" class="section-div">
-        <div>
+    <!-- Seção Habilidades -->
+    <section id="skills" class="section-div">
+        <div class="container">
             <div class="text-content">
-                <h2>Experiência Profissional</h2>
+                <div class="section-header">
+                    <h2>Habilidades Técnicas</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fab fa-html5"></i> Frontend</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">HTML5</span>
+                            <span class="skill-item">CSS3</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">React</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">MySQL</span>
+                            <span class="skill-item">MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Ferramentas</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item">VS Code</span>
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Docker</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-network-wired"></i> Infraestrutura</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Redes</span>
+                            <span class="skill-item">Fibra Óptica</span>
+                            <span class="skill-item">CFTV</span>
+                            <span class="skill-item">Segurança</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Experiência -->
+    <section id="resume" class="section-div">
+        <div class="container">
+            <div class="text-content">
+                <div class="section-header">
+                    <h2>Experiência Profissional</h2>
+                    <div class="section-divider"></div>
+                </div>
                 <p class="section-intro">Minha jornada combina experiência técnica prática com sólidas habilidades de resolução de problemas.</p>
                 
-                <!-- Experiência 1: Fibra Óptica -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo-placeholder">🌐</div>
-                        <div class="experience-title">
-                            <h3>Técnico de Fibra Óptica</h3>
-                            <h4>Age Fibra</h4>
-                            <span class="experience-period">Abril 2025 - Presente • 10 meses</span>
-                            <span class="experience-location">Brasília, DF • Presencial</span>
+                <!-- Timeline de Experiências -->
+                <div class="timeline">
+                    <!-- Experiência 1: Fibra Óptica -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <div class="company-logo">🌐</div>
+                                    <div class="experience-title">
+                                        <h3>Técnico de Fibra Óptica</h3>
+                                        <h4>Age Fibra</h4>
+                                        <div class="experience-meta">
+                                            <span class="experience-period"><i class="far fa-calendar"></i> Abril 2025 - Presente</span>
+                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <ul class="responsibilities">
+                                        <li>Instalação, configuração e manutenção de conexões de fibra óptica</li>
+                                        <li>Fusão de fibras ópticas e configuração de roteadores</li>
+                                        <li>Solução de problemas de conectividade e otimização de redes</li>
+                                        <li>Atendimento ao cliente com tradução de questões técnicas</li>
+                                    </ul>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Fibra Óptica</span>
+                                        <span class="skill-tag">Redes</span>
+                                        <span class="skill-tag">Suporte Técnico</span>
+                                        <span class="skill-tag">Protocolos</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="experience-description">
-                        <ul class="responsibilities">
-                            <li>Instalação, configuração e manutenção de conexões de fibra óptica para clientes</li>
-                            <li>Fusão de fibras ópticas e configuração de roteadores</li>
-                            <li>Solução de problemas de conectividade e otimização de redes</li>
-                            <li>Atendimento ao cliente com tradução de questões técnicas para soluções compreensíveis</li>
-                            <li>Gestão de infraestrutura de rede e protocolos de internet</li>
-                        </ul>
-                        <div class="skills-tags">
-                            <span class="skill-tag">Tecnologia de Fibra Óptica</span>
-                            <span class="skill-tag">Redes de Computadores</span>
-                            <span class="skill-tag">Suporte Técnico</span>
-                            <span class="skill-tag">Protocolos de Internet</span>
-                            <span class="skill-tag">Atendimento ao Cliente</span>
+                    
+                    <!-- Experiência 2: Segurança Eletrônica -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <div class="company-logo">🔒</div>
+                                    <div class="experience-title">
+                                        <h3>Técnico de Segurança Eletrônica</h3>
+                                        <h4>BRASFORT</h4>
+                                        <div class="experience-meta">
+                                            <span class="experience-period"><i class="far fa-calendar"></i> Set 2024 - Mar 2025</span>
+                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <ul class="responsibilities">
+                                        <li>Instalação de sistemas de CFTV, alarmes e cercas elétricas</li>
+                                        <li>Planejamento de infraestrutura e integração de componentes</li>
+                                        <li>Diagnóstico de falhas em circuitos eletrônicos</li>
+                                        <li>Manutenção preventiva e corretiva</li>
+                                    </ul>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Eletrônica</span>
+                                        <span class="skill-tag">CFTV</span>
+                                        <span class="skill-tag">Diagnóstico</span>
+                                        <span class="skill-tag">Hardware</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Experiência 2: Segurança Eletrônica -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo-placeholder">🔒</div>
-                        <div class="experience-title">
-                            <h3>Técnico de Segurança Eletrônica</h3>
-                            <h4>BRASFORT</h4>
-                            <span class="experience-period">Setembro 2024 - Março 2025 • 7 meses</span>
-                            <span class="experience-location">Brasília, DF • Presencial</span>
+                    
+                    <!-- Experiência 3: Almoxarifado -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <div class="company-logo">📦</div>
+                                    <div class="experience-title">
+                                        <h3>Controlador de Almoxarifado</h3>
+                                        <h4>In House Marketing</h4>
+                                        <div class="experience-meta">
+                                            <span class="experience-period"><i class="far fa-calendar"></i> Jan - Jun 2024</span>
+                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <ul class="responsibilities">
+                                        <li>Gestão de estoque em autoatendimento</li>
+                                        <li>Atendimento ao cliente e orientação em sistemas</li>
+                                        <li>Operação de caixas e gestão comercial</li>
+                                        <li>Solução de problemas sob pressão</li>
+                                    </ul>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Comunicação</span>
+                                        <span class="skill-tag">Gestão</span>
+                                        <span class="skill-tag">Atendimento</span>
+                                        <span class="skill-tag">Organização</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="experience-description">
-                        <ul class="responsibilities">
-                            <li>Instalação e configuração de sistemas de CFTV, alarmes e cercas elétricas</li>
-                            <li>Planejamento de infraestrutura e integração de componentes eletrônicos</li>
-                            <li>Passagem de cabos, configuração de DVRs e ajuste de câmeras</li>
-                            <li>Diagnóstico de falhas em circuitos e sistemas eletrônicos</li>
-                            <li>Manutenção preventiva e corretiva de sistemas de segurança</li>
-                        </ul>
-                        <div class="skills-tags">
-                            <span class="skill-tag">Sistemas Eletrônicos</span>
-                            <span class="skill-tag">Redes</span>
-                            <span class="skill-tag">Diagnóstico de Falhas</span>
-                            <span class="skill-tag">Solução de Problemas</span>
-                            <span class="skill-tag">Configuração de Hardware</span>
+                    
+                    <!-- Experiência 4: Militar -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Experiência 3: Almoxarifado -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo-placeholder">📦</div>
-                        <div class="experience-title">
-                            <h3>Controlador de Almoxarifado</h3>
-                            <h4>In House Marketing</h4>
-                            <span class="experience-period">Janeiro 2024 - Junho 2024 • 6 meses</span>
-                            <span class="experience-location">Brasília, DF • Presencial</span>
-                        </div>
-                    </div>
-                    <div class="experience-description">
-                        <ul class="responsibilities">
-                            <li>Gestão de estoque em ambiente de autoatendimento</li>
-                            <li>Atendimento ao cliente e orientação no uso de sistemas</li>
-                            <li>Operação de caixas e gestão de fluxo comercial</li>
-                            <li>Solução de problemas sob pressão com clientes diversificados</li>
-                            <li>Trabalho em equipe para eficiência operacional</li>
-                        </ul>
-                        <div class="skills-tags">
-                            <span class="skill-tag">Comunicação</span>
-                            <span class="skill-tag">Gestão de Estoque</span>
-                            <span class="skill-tag">Atendimento ao Público</span>
-                            <span class="skill-tag">Trabalho em Equipe</span>
-                            <span class="skill-tag">Resolução de Conflitos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Experiência 4: Militar -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo-placeholder">🎖️</div>
-                        <div class="experience-title">
-                            <h3>Militar - Setor Administrativo</h3>
-                            <h4>Exército Brasileiro</h4>
-                            <span class="experience-period">Março 2019 - Março 2024 • 5 anos 1 mês</span>
-                            <span class="experience-location">Brasília, DF • Presencial</span>
-                        </div>
-                    </div>
-                    <div class="experience-description">
-                        <ul class="responsibilities">
-                            <li>Gestão de licitações com elaboração de planilhas e editais em Excel/Word</li>
-                            <li>Arquivista responsável pela gestão documental de grande volume</li>
-                            <li>Conservação e organização de documentos históricos e oficiais</li>
-                            <li>Controle e registro de documentação para militares e organizações</li>
-                            <li>Desenvolvimento de rigor metodológico e atenção aos detalhes</li>
-                        </ul>
-                        <div class="skills-tags">
-                            <span class="skill-tag">Excel Avançado</span>
-                            <span class="skill-tag">Gestão Documental</span>
-                            <span class="skill-tag">Organização</span>
-                            <span class="skill-tag">Ética Profissional</span>
-                            <span class="skill-tag">Disciplina</span>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <div class="company-logo">🎖️</div>
+                                    <div class="experience-title">
+                                        <h3>Militar - Setor Administrativo</h3>
+                                        <h4>Exército Brasileiro</h4>
+                                        <div class="experience-meta">
+                                            <span class="experience-period"><i class="far fa-calendar"></i> 2019 - 2024</span>
+                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <ul class="responsibilities">
+                                        <li>Gestão de licitações com Excel/Word avançado</li>
+                                        <li>Arquivista responsável pela gestão documental</li>
+                                        <li>Conservação de documentos históricos</li>
+                                        <li>Controle e registro de documentação oficial</li>
+                                    </ul>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Excel</span>
+                                        <span class="skill-tag">Documentação</span>
+                                        <span class="skill-tag">Organização</span>
+                                        <span class="skill-tag">Disciplina</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,49 +332,132 @@
         </div>
     </section>
     
+    <!-- Seção Portfólio -->
     <section id="portfolio" class="section-div">
-        <div>
+        <div class="container">
             <div class="text-content">
-                <h2>Portfólio</h2>
-                <p>
-                    <a href="https://github.com/EssenceNTC" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> Acesse meu GitHub: github.com/EssenceNTC
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="pricing" class="section-div">
-        <div>
-            <div class="text-content">
-                <h2>Preços</h2>
-                <p>A combinar - entre em contato para orçamento personalizado</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section-div">
-        <div>
-            <div class="text-content">
-                <h2>Contato</h2>
-                <div class="contact-info">
-                    <p>
-                        <i class="fas fa-envelope"></i> 
-                        <a href="mailto:rodrigodesousa17@outlook.com">rodrigodesousa17@outlook.com</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-envelope"></i> 
-                        <a href="mailto:rodrigoawscloud@outlook.com">rodrigoawscloud@outlook.com</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-phone"></i> 
-                        <a href="tel:+5561991435503">(61) 99143-5503</a>
-                    </p>
+                <div class="section-header">
+                    <h2>Portfólio</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Acesse todos os meus projetos públicos e contribuições no GitHub</p>
+                        <a href="https://github.com/EssenceNTC" target="_blank" class="portfolio-link">
+                            Ver Perfil <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Projetos Web</h3>
+                        <p>Desenvolvimento de aplicações web completas e responsivas</p>
+                        <a href="https://github.com/EssenceNTC?tab=repositories" target="_blank" class="portfolio-link">
+                            Ver Projetos <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Em Desenvolvimento</h3>
+                        <p>Novos projetos utilizando tecnologias modernas do mercado</p>
+                        <a href="#contact" class="portfolio-link">
+                            Solicitar Demo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Seção Contato -->
+    <section id="contact" class="section-div">
+        <div class="container">
+            <div class="text-content">
+                <div class="section-header">
+                    <h2>Entre em Contato</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <p class="contact-intro">Vamos conversar sobre como posso ajudar no seu projeto!</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Principal</h3>
+                        <a href="mailto:rodrigodesousa17@outlook.com" class="contact-link">
+                            rodrigodesousa17@outlook.com
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Alternativo</h3>
+                        <a href="mailto:rodrigoawscloud@outlook.com" class="contact-link">
+                            rodrigoawscloud@outlook.com
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Telefone / WhatsApp</h3>
+                        <a href="https://wa.me/5561991435503" target="_blank" class="contact-link">
+                            (61) 99143-5503
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Localização</h3>
+                        <span class="contact-text">Brasília, DF - Brasil</span>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Rodrigo Sousa. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> por Rodrigo</p>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
