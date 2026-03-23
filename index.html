@@ -3,463 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodrigo Sousa | Desenvolvedor em desenvolvimento </title>
-    <!-- Link para o CSS externo -->
+    <title>Rodrigo de Sousa | Portfólio</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="header-container">
-            <h1>Rodrigo <span>Sousa</span></h1>
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul class="navegacao-primaria">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
-                    <li><a href="#resume" class="nav-link">Experiência</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                    <li><a href="#contact" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
+        <div class="logo">R<span>S</span></div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="menu-mobile">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
-    
-    <!-- Seção Home -->
-    <section id="home" aria-label="Apresentação inicial" class="section-div active">
+
+    <!-- Seção Início -->
+    <section id="inicio" class="section active">
         <div class="container">
-            <div class="text-content">
-                <h2>Olá, eu sou</h2>
-                <h2 class="digitando">Desenvolvedor trainee </h2>
-                <p class="subtitle">
-                    Transformando conceitos em soluções digitais através de estudo contínuo e excelência técnica.
-
-                    Convertendo ideias em realidade digital por meio de aprendizado constante e dedicação à qualidade.
-
-                    Com estudo e dedicação, materializo visões em projetos funcionais que fazem a diferença.
-
-                    Aprendizado constante para transformar ideias inovadoras em soluções tecnológicas impactantes.
-                </p>
-                <div class="cta-buttons">
-                    <a href="curriculo-rodrigo.pdf.pdf" download class="download-btn">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                   
+            <div class="inicio-content">
+                <div class="texto">
+                    <h1>Olá, eu sou</h1>
+                    <h2 class="nome">RODRIGO DE SOUSA</h2>
+                    <p>Estudante de Desenvolvimento Web | Apaixonado por Tecnologia</p>
+                    <div class="botoes">
+                        <a href="#contato" class="btn">Contato</a>
+                        <!-- CORRIGIDO: nome do arquivo sem espaços -->
+                        <a href="curriculo-rodrigo.pdf" class="btn btn-outline" download>
+                            <i class="fas fa-download"></i> Currículo
+                        </a>
+                    </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/EssenceNTC" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:rodrigodesousa17@outlook.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rodrigodesousacloud/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="image-container">
-                <div class="image-wrapper">
-                    <img src="unnamed (1).jpg" alt="Rodrigo Sousa - Desenvolvedor em desenvolvimento loading="lazy">
-                    <div class="image-badge">
+                <div class="imagem">
+                    <div class="foto-perfil">
+                        <img src="sua-foto.jpg" alt="Rodrigo de Sousa">
+                        <div class="foto-overlay"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Seção Sobre -->
-    <section id="about" class="section-div">
+    <section id="sobre" class="section">
         <div class="container">
-            <div class="text-content">
-                <div class="section-header">
-                    <h2>Sobre Mim</h2>
-                    <div class="section-divider"></div>
-                </div>
-                <p class="about-intro">Com 26 anos, minha jornada na tecnologia é marcada por aprendizado constante e adaptação às inovações do setor.</p>
-                
-                <div class="about-content">
-                    <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Formação</h3>
-                        <p>Análise e Desenvolvimento de Sistemas - Cursando</p>
-                    </div>
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Olá! Meu nome é <strong>Rodrigo de Sousa</strong>, sou estudante de desenvolvimento web e estou em constante aprendizado para me tornar um desenvolvedor full stack.</p>
+                    <p>Atualmente estou focado em estudar e praticar as principais tecnologias do mercado, buscando sempre evoluir e criar projetos que resolvam problemas reais.</p>
+                    <p>Estou em busca da minha primeira oportunidade na área de tecnologia para aplicar meus conhecimentos e continuar aprendendo.</p>
                     
-                    <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3>Objetivo</h3>
-                        <p>Desenvolver soluções tecnológicas que impactem positivamente a vida das pessoas</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Filosofia</h3>
-                        <p>"Escrever código limpo não é uma opção, é uma responsabilidade"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Seção Habilidades -->
-    <section id="skills" class="section-div">
-        <div class="container">
-            <div class="text-content">
-                <div class="section-header">
-                    <h2>Habilidades Técnicas</h2>
-                    <div class="section-divider"></div>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="fab fa-html5"></i> Frontend</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">HTML5</span>
-                            <span class="skill-item">CSS3</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">React</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><i class="fas fa-server"></i> Backend</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">Node.js</span>
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">MySQL</span>
-                            <span class="skill-item">MongoDB</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Ferramentas</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">Git & GitHub</span>
-                            <span class="skill-item">VS Code</span>
-                            <span class="skill-item">AWS</span>
-                            <span class="skill-item">Docker</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><i class="fas fa-network-wired"></i> Infraestrutura</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">Redes</span>
-                            <span class="skill-item">Fibra Óptica</span>
-                            <span class="skill-item">CFTV</span>
-                            <span class="skill-item">Segurança</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Seção Experiência -->
-    <section id="resume" class="section-div">
-        <div class="container">
-            <div class="text-content">
-                <div class="section-header">
-                    <h2>Experiência Profissional</h2>
-                    <div class="section-divider"></div>
-                </div>
-                <p class="section-intro">Minha jornada combina experiência técnica prática com sólidas habilidades de resolução de problemas.</p>
-                
-                <!-- Timeline de Experiências -->
-                <div class="timeline">
-                    <!-- Experiência 1: Fibra Óptica -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                            <div class="marker-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="experience-header">
-                                    <div class="company-logo">🌐</div>
-                                    <div class="experience-title">
-                                        <h3>Técnico de Fibra Óptica</h3>
-                                        <h4>Age Fibra</h4>
-                                        <div class="experience-meta">
-                                            <span class="experience-period"><i class="far fa-calendar"></i> Abril 2025 - Presente</span>
-                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience-description">
-                                    <ul class="responsibilities">
-                                        <li>Instalação, configuração e manutenção de conexões de fibra óptica</li>
-                                        <li>Fusão de fibras ópticas e configuração de roteadores</li>
-                                        <li>Solução de problemas de conectividade e otimização de redes</li>
-                                        <li>Atendimento ao cliente com tradução de questões técnicas</li>
-                                    </ul>
-                                    <div class="skills-tags">
-                                        <span class="skill-tag">Fibra Óptica</span>
-                                        <span class="skill-tag">Redes</span>
-                                        <span class="skill-tag">Suporte Técnico</span>
-                                        <span class="skill-tag">Protocolos</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Experiência 2: Segurança Eletrônica -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                            <div class="marker-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="experience-header">
-                                    <div class="company-logo">🔒</div>
-                                    <div class="experience-title">
-                                        <h3>Técnico de Segurança Eletrônica</h3>
-                                        <h4>BRASFORT</h4>
-                                        <div class="experience-meta">
-                                            <span class="experience-period"><i class="far fa-calendar"></i> Set 2024 - Mar 2025</span>
-                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience-description">
-                                    <ul class="responsibilities">
-                                        <li>Instalação de sistemas de CFTV, alarmes e cercas elétricas</li>
-                                        <li>Planejamento de infraestrutura e integração de componentes</li>
-                                        <li>Diagnóstico de falhas em circuitos eletrônicos</li>
-                                        <li>Manutenção preventiva e corretiva</li>
-                                    </ul>
-                                    <div class="skills-tags">
-                                        <span class="skill-tag">Eletrônica</span>
-                                        <span class="skill-tag">CFTV</span>
-                                        <span class="skill-tag">Diagnóstico</span>
-                                        <span class="skill-tag">Hardware</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Experiência 3: Almoxarifado -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                            <div class="marker-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="experience-header">
-                                    <div class="company-logo">📦</div>
-                                    <div class="experience-title">
-                                        <h3>Controlador de Almoxarifado</h3>
-                                        <h4>In House Marketing</h4>
-                                        <div class="experience-meta">
-                                            <span class="experience-period"><i class="far fa-calendar"></i> Jan - Jun 2024</span>
-                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience-description">
-                                    <ul class="responsibilities">
-                                        <li>Gestão de estoque em autoatendimento</li>
-                                        <li>Atendimento ao cliente e orientação em sistemas</li>
-                                        <li>Operação de caixas e gestão comercial</li>
-                                        <li>Solução de problemas sob pressão</li>
-                                    </ul>
-                                    <div class="skills-tags">
-                                        <span class="skill-tag">Comunicação</span>
-                                        <span class="skill-tag">Gestão</span>
-                                        <span class="skill-tag">Atendimento</span>
-                                        <span class="skill-tag">Organização</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Experiência 4: Militar -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="experience-header">
-                                    <div class="company-logo">🎖️</div>
-                                    <div class="experience-title">
-                                        <h3>Militar - Setor Administrativo</h3>
-                                        <h4>Exército Brasileiro</h4>
-                                        <div class="experience-meta">
-                                            <span class="experience-period"><i class="far fa-calendar"></i> 2019 - 2024</span>
-                                            <span class="experience-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience-description">
-                                    <ul class="responsibilities">
-                                        <li>Gestão de licitações com Excel/Word avançado</li>
-                                        <li>Arquivista responsável pela gestão documental</li>
-                                        <li>Conservação de documentos históricos</li>
-                                        <li>Controle e registro de documentação oficial</li>
-                                    </ul>
-                                    <div class="skills-tags">
-                                        <span class="skill-tag">Excel</span>
-                                        <span class="skill-tag">Documentação</span>
-                                        <span class="skill-tag">Organização</span>
-                                        <span class="skill-tag">Disciplina</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Seção Portfólio -->
-    <section id="portfolio" class="section-div">
-        <div class="container">
-            <div class="text-content">
-                <div class="section-header">
-                    <h2>Portfólio</h2>
-                    <div class="section-divider"></div>
-                </div>
-                
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="portfolio-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>Acesse todos os meus projetos públicos e contribuições no GitHub</p>
-                        <a href="https://github.com/EssenceNTC" target="_blank" class="portfolio-link">
-                            Ver Perfil <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="portfolio-card">
-                        <div class="portfolio-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Projetos Web</h3>
-                        <p>Desenvolvimento de aplicações web completas e responsivas</p>
-                        <a href="https://github.com/EssenceNTC?tab=repositories" target="_blank" class="portfolio-link">
-                            Ver Projetos <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="portfolio-card">
-                        <div class="portfolio-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Em Desenvolvimento</h3>
-                        <p>Novos projetos utilizando tecnologias modernas do mercado</p>
-                        <a href="#contact" class="portfolio-link">
-                            Solicitar Demo <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Seção Contato -->
-    <section id="contact" class="section-div">
-        <div class="container">
-            <div class="text-content">
-                <div class="section-header">
-                    <h2>Entre em Contato</h2>
-                    <div class="section-divider"></div>
-                </div>
-                
-                <p class="contact-intro">Vamos conversar sobre como posso ajudar no seu projeto!</p>
-                
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                    <div class="info-contato">
+                        <div class="info-item">
                             <i class="fas fa-envelope"></i>
+                            <span>rodrigodesousa17@outlook.com</span>
                         </div>
-                        <h3>Email Principal</h3>
-                        <a href="mailto:rodrigodesousa17@outlook.com" class="contact-link">
-                            rodrigodesousa17@outlook.com
-                        </a>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email Alternativo</h3>
-                        <a href="mailto:rodrigoawscloud@outlook.com" class="contact-link">
-                            rodrigoawscloud@outlook.com
-                        </a>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                        <div class="info-item">
                             <i class="fas fa-phone"></i>
+                            <span>(61) 99143-5503</span>
                         </div>
-                        <h3>Telefone / WhatsApp</h3>
-                        <a href="https://wa.me/5561991435503" target="_blank" class="contact-link">
-                            (61) 99143-5503
-                        </a>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                        <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
+                            <span>Brasília - DF</span>
                         </div>
-                        <h3>Localização</h3>
-                        <span class="contact-text">Brasília, DF - Brasil</span>
+                        <div class="info-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/SousaDeRodrigo" target="_blank">github.com/SousaDeRodrigo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Tecnologias -->
+    <section id="tecnologias" class="section">
+        <div class="container">
+            <h2 class="section-title">Tecnologias que Estudo</h2>
+            <div class="tecnologias-grid">
+                <div class="tech-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Spring Boot</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Spring Data JPA</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-database"></i>
+                    <h3>PostgreSQL</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-docker"></i>
+                    <h3>Docker</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-tailwind"></i>
+                    <h3>Tailwind</h3>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="section">
+        <div class="container">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projetos-content">
+                <div class="github-info">
+                    <i class="fab fa-github"></i>
+                    <h3>Confira meus projetos no GitHub</h3>
+                    <p>Acesse meu perfil para ver todos os projetos que estou desenvolvendo durante meus estudos.</p>
+                    <a href="https://github.com/SousaDeRodrigo" target="_blank" class="btn github-btn">
+                        <i class="fab fa-github"></i> Visitar GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <h3>Vamos conversar?</h3>
+                    <p>Estou aberto a oportunidades, feedbacks e networking. Entre em contato comigo!</p>
+                    
+                    <div class="contato-detalhes">
+                        <div class="contato-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>rodrigodesousa17@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>(61) 99143-5503</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <strong>GitHub</strong>
+                                <a href="https://github.com/SousaDeRodrigo" target="_blank">github.com/SousaDeRodrigo</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Envie uma Mensagem</h3>
-                    <form id="messageForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Seu email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                        </button>
-                    </form>
-                </div>
+                <form class="contato-form" id="formContato">
+                    <input type="text" placeholder="Seu nome" id="nome" required>
+                    <input type="email" placeholder="Seu e-mail" id="email" required>
+                    <textarea placeholder="Sua mensagem" id="mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                    <div class="form-mensagem"></div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Rodrigo Sousa. Todos os direitos reservados.</p>
-            <p>Desenvolvido com <i class="fas fa-heart"></i> por Rodrigo</p>
+        <div class="container">
+            <p>&copy; 2024 Rodrigo de Sousa. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://github.com/SousaDeRodrigo" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
